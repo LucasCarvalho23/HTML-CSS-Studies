@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 450px;
+            border-collapse: collapse;
+            position: relative; /* Para fixar o cabeçalho, precisa obrigatoriamente inserir esse posicionamento. */
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        #largura {
+            width: 100px;
+        }
+
+        caption {
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th { /* Cabeçalho */
+            position: sticky; 
+            top: -1px; /* Não fica 0px pq 1px fica abaixo, então pra ele travar sem nenhum espaço precisa ser -1px */
+            background-color: gray;
+        }
+
+        tbody > tr:nth-child(even) { 
+            /* Efeito zebrado. 2n é quantas linhas ele pula. De 2 em 2. Pode ser colocado como par (even) e impar (odd) também
+             nth-child quer dizer pseudoclasse*/
+            background-color: lightgray;
+        }
+
+        td.numero {
+            text-align: right;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES:
+        
+        TABLE
+            CAPTION (Legenda)
+            THEAD
+                TR, TD TH
+            TBODY
+                TR, TD TH
+            TFOOT
+                TR, TD TH
+
+    -->
+
+    <table>
+
+        <caption>População dos Estados</caption>
+
+        <thead>
+            <tr>
+                <th scope = "col">Estado</th>
+                <th id = "largura" scope = "col">População</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class = "numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class = "numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class = "numero">17.264.943</td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td class = "numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class = "numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class = "numero">17.264.943</td>
+            </tr>
+        
+            <tr>
+                <td>São Paulo</td>
+                <td class = "numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class = "numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class = "numero">17.264.943</td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td class = "numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class = "numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class = "numero">17.264.943</td>
+            </tr>
+        
+            <tr>
+                <td>São Paulo</td>
+                <td class = "numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class = "numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class = "numero">17.264.943</td>
+            </tr>
+
+            <tr>
+                <td>São Paulo</td>
+                <td class = "numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class = "numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class = "numero">17.264.943</td>
+            </tr>
+        
+            <tr>
+                <td>São Paulo</td>
+                <td class = "numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class = "numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class = "numero">17.264.943</td>
+            </tr>
+        
+            <tr>
+                <td>São Paulo</td>
+                <td class = "numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class = "numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class = "numero">17.264.943</td>
+            </tr>
+        
+            <tr>
+                <td>São Paulo</td>
+                <td class = "numero">45.919.049</td>
+            </tr>
+
+            <tr>
+                <td>Minas Gerais</td>
+                <td class = "numero">21.168.791</td>
+            </tr>
+
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class = "numero">17.264.943</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td scope = "row">Total de Habitantes</td>
+                <td> <strong>0000</strong></td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias eius voluptatum perspiciatis fugiat cumque velit cum impedit, officia commodi consequuntur ducimus, animi tempora ad a incidunt autem distinctio maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsum deleniti natus. Qui, aut, veritatis voluptatibus beatae vel optio est, illo laudantium soluta fugiat earum impedit adipisci eum eius odio!maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quidem provident assumenda quibusdam commodi porro maiores odit, sed a, tenetur, sint magnam sunt! Reiciendis dolore, facere esse ratione ex cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia incidunt id sed eligendi, animi aliquam, dolorem dignissimos mollitia laboriosam ad vitae quod possimus cum optio recusandae natus, facilis praesentium!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias eius voluptatum perspiciatis fugiat cumque velit cum impedit, officia commodi consequuntur ducimus, animi tempora ad a incidunt autem distinctio maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsum deleniti natus. Qui, aut, veritatis voluptatibus beatae vel optio est, illo laudantium soluta fugiat earum impedit adipisci eum eius odio!maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quidem provident assumenda quibusdam commodi porro maiores odit, sed a, tenetur, sint magnam sunt! Reiciendis dolore, facere esse ratione ex cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia incidunt id sed eligendi, animi aliquam, dolorem dignissimos mollitia laboriosam ad vitae quod possimus cum optio recusandae natus, facilis praesentium!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias eius voluptatum perspiciatis fugiat cumque velit cum impedit, officia commodi consequuntur ducimus, animi tempora ad a incidunt autem distinctio maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsum deleniti natus. Qui, aut, veritatis voluptatibus beatae vel optio est, illo laudantium soluta fugiat earum impedit adipisci eum eius odio!maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quidem provident assumenda quibusdam commodi porro maiores odit, sed a, tenetur, sint magnam sunt! Reiciendis dolore, facere esse ratione ex cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia incidunt id sed eligendi, animi aliquam, dolorem dignissimos mollitia laboriosam ad vitae quod possimus cum optio recusandae natus, facilis praesentium!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias eius voluptatum perspiciatis fugiat cumque velit cum impedit, officia commodi consequuntur ducimus, animi tempora ad a incidunt autem distinctio maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsum deleniti natus. Qui, aut, veritatis voluptatibus beatae vel optio est, illo laudantium soluta fugiat earum impedit adipisci eum eius odio!maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quidem provident assumenda quibusdam commodi porro maiores odit, sed a, tenetur, sint magnam sunt! Reiciendis dolore, facere esse ratione ex cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia incidunt id sed eligendi, animi aliquam, dolorem dignissimos mollitia laboriosam ad vitae quod possimus cum optio recusandae natus, facilis praesentium!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias eius voluptatum perspiciatis fugiat cumque velit cum impedit, officia commodi consequuntur ducimus, animi tempora ad a incidunt autem distinctio maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsum deleniti natus. Qui, aut, veritatis voluptatibus beatae vel optio est, illo laudantium soluta fugiat earum impedit adipisci eum eius odio!maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quidem provident assumenda quibusdam commodi porro maiores odit, sed a, tenetur, sint magnam sunt! Reiciendis dolore, facere esse ratione ex cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia incidunt id sed eligendi, animi aliquam, dolorem dignissimos mollitia laboriosam ad vitae quod possimus cum optio recusandae natus, facilis praesentium!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestias eius voluptatum perspiciatis fugiat cumque velit cum impedit, officia commodi consequuntur ducimus, animi tempora ad a incidunt autem distinctio maxime?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsum deleniti natus. Qui, aut, veritatis voluptatibus beatae vel optio est, illo laudantium soluta fugiat earum impedit adipisci eum eius odio!maxime? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quidem provident assumenda quibusdam commodi porro maiores odit, sed a, tenetur, sint magnam sunt! Reiciendis dolore, facere esse ratione ex cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quia incidunt id sed eligendi, animi aliquam, dolorem dignissimos mollitia laboriosam ad vitae quod possimus cum optio recusandae natus, facilis praesentium!</p>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- 
+
+    Required - forced to fill in the field.
+    Step - calc step to step that number pass.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <h1> Test Of Forms</h1>
+
+    <form action = "cadastro.php" autocomplete="on" method = "get">
+        
+        <p>
+            <label for = "iname"> Name </label>
+            <input autocomplete="name" id = "iname" name = "name" maxlength = "30" placeholder = "Full name" type = "text" required>
+        </p>
+
+        <p>
+            <label for = "imedia"> Media </label>
+            <input id = "imedia" minlength="0" maxlength="10" name = "media" placeholder = "His note" step=".1" type = "number">
+        </p>
+
+        <p>
+            <label for = "imonth">School Year</label>
+            <input id="imonth" name="month" type="month" value = "2022-09">
+        </p>
+
+        <p>
+            <label for="ihour"> Hour </label>
+            <input id = "ihour" name = "hour" type = "time" value = "05:05">
+        </p>
+
+        <p>
+            <input type = "submit" value = "Send">
+            <input type = "reset" value = "Clear">
+        </p>
+
+    </form>
+    
+</body>
+</html>

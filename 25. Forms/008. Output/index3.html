@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <h1>Output using JavaScript</h1>
+
+    <form action = "cadastro.php" method="get">
+
+        <p>
+            <label for = "yearId">What year were you born?</label>
+            <input type = "number" name = "yearClass" id = "yearId" min = "1990" max = "2022" oninput = "calc()">
+        </p>
+
+        <p>
+            <label for = "ageId">Your age is: </label>
+            <output id = "ageId"></output>
+        </p>
+
+        <p>
+            <input type = "submit" value = "Send">
+            <input type = "reset" value = "Clear">
+        </p>
+    </form>
+
+
+<!-- JavaScript -->
+    <script>
+
+        function calc() {
+            let nowDate = new Date().getFullYear()
+            ageId.innerHTML = Number(nowDate) - Number(yearId.value)
+        }
+
+    </script>
+    
+</body>
+</html>

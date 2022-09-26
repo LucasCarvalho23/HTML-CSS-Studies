@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <h1>Output using JavaScript</h1>
+
+    <form action = "cadastro.php" method = "get">
+
+        <p>
+            <label for = "rateId">Numbers:</label>
+            <input type = "range" name = "rateClass" id = "rateId" oninput = "totalId.innerHTML = Number(rateId.value)"> 
+            <output id = "totalId">50</output>
+        </p>
+
+        <p>
+            <input type = "submit" value = "Send">
+            <input type = "reset" value = "Clear">
+        </p>
+
+    </form>
+    
+</body>
+</html>

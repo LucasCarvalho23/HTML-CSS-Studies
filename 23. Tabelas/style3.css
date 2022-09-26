@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 400px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td,th {
+    border: 1px solid black;
+    padding: 7px;
+}
+
+thead {
+    background-color: gray;
+    color: white;
+}
+
+.numero {
+    text-align: right;
+}
+
+tfoot {
+    background-color: blanchedalmond;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        div {   
+            display: inline-block;
+            background-color: lightgray;
+            text-align: center;
+            border: 1px solid black;
+            height: 200px; 
+            width: 200px; 
+        }
+
+        div:hover { /*Quando passa o mouse, muda de cor*/
+            background-color: yellow;
+        }
+
+        div > p { /*Esconde o paragrafo*/
+            display: none;
+        }
+
+        div:hover > p { /*Motra o que tem escondido*/
+           display: block;
+           color: white; 
+           background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Passe o mouse sobre o texto apaixo</p>
+    <div id = "d1">Passe o mouse aqui</div>
+    <div id = "d2">Passe o mouse aqui</div>
+    <div id = "d3">Passe o mouse aqui
+        <P>TEXTO ESCONDIDO</P>
+    </div>
+    
+</body>
+</html>
