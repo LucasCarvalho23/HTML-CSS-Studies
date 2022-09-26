@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áudio no site</title>
+</head>
+<body>
+    <h1>Reproduzindo áudios</h1>
+
+    <!--
+            preload: 
+            - auto: O áudio só termina de carregar quando o site todo carrega.
+            - metadata: Carrega informações do áudio, como tempo de duração.
+            - none: Não carrega nada. Fica 0:00 no áudio.
+
+            controls: Mostra os controles.
+
+            loop: Quando a música termina, recomeça.
+
+            Obs: Criando mais sources, ele dá uma próxima opção, caso a anterior não carregue. Para inserir mais áudios, crie novas tags audio.
+
+        -->
+
+    <audio preload = "metadata" controls loop>
+
+        <source src = "midia/song01.mp3" type = "audio/mpeg">
+        <p>
+            Infelizmente o seu navegador não reproduzir o audio. <a href = "midia/song01.mp3">Clique aqui</a> para salvar o áudio em seu computador.
+        </p>
+
+    </audio>
+
+    <ul>
+        <li>
+            Para baixar o áudio <a href = "midia/song01.mp3" download = "song01.mp3" type = "application/mpeg">clique aqui</a>.
+        </li>
+        <li>
+            Para baixar o arquivo compactado <a href = "midia/song01.zip" download = "song01.zip" type = "application/zip">clique aqui</a>.
+        </li>
+    </ul>
+
+</body>
+</html>
