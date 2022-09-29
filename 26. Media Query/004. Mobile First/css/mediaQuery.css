@@ -1,0 +1,81 @@
+/* Others Medias */
+
+/* 
+    Typical Device Breakpoints:
+        Small Screen: Up to 600px
+        Phone: 600px to 768px
+        Tablet: 768px to 992px
+        Desktop: 992px to 1200px
+        Big Screen: over 1200px
+*/
+
+@charset "UTF-8";
+
+
+/* PRINT */
+@media print {
+    body {
+        background-image: url(../images/back-print.jpg);
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main h1 {
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: none;
+        color: black;
+    }
+
+    .iconPhone {display: none;} 
+    .iconTablet {display: none;} 
+    .iconPrint {display: block;} 
+    .iconDesktop {display: none;} 
+    .iconTv {display: none;}    
+}
+
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../images/back-tablet.jpg);
+    }
+
+    .iconPhone {display: none;} 
+    .iconTablet {display: block;} 
+    .iconPrint {display: none;} 
+    .iconDesktop {display: none;} 
+    .iconTv {display: none;}
+
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    body {
+        background-image: url(../images/back-pc.jpg);
+    }
+
+    .iconPhone {display: none;} 
+    .iconTablet {display: none;} 
+    .iconPrint {display: none;} 
+    .iconDesktop {display: block;} 
+    .iconTv {display: none;}
+
+}
+
+
+/* BIG SCREEN (TV) */
+@media screen and (min-width: 1221px) {
+    body {
+        background-image: url(../images/back-tv.jpg);
+    }
+
+    .iconPhone {display: none;} 
+    .iconTablet {display: none;} 
+    .iconPrint {display: none;} 
+    .iconDesktop {display: none;} 
+    .iconTv {display: block;}
+
+}
